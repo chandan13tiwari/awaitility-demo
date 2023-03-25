@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "81134850-0dc2-4936-b9df-c22397f5a2d4",
+		"name": "awaitility-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21913219"
+	},
+	"item": [
+		{
+			"name": "get counter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/awaitility/get-count?id=0a140152-2a74-4578-90e5-cc13871deee9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"awaitility",
+						"get-count"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0a140152-2a74-4578-90e5-cc13871deee9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/awaitility/add-count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"awaitility",
+						"add-count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update count",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/awaitility/update-count?id=0a140152-2a74-4578-90e5-cc13871deee9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"awaitility",
+						"update-count"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0a140152-2a74-4578-90e5-cc13871deee9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "awaitility demo api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/awaitility/demo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"awaitility",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
