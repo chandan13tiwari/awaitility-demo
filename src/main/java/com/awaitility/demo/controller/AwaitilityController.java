@@ -2,7 +2,6 @@ package com.awaitility.demo.controller;
 
 import com.awaitility.demo.entity.Counter;
 import com.awaitility.demo.service.CounterService;
-import org.awaitility.Durations;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -53,11 +52,12 @@ public class AwaitilityController {
   public String testAwaitilityAtLeast() {
     UUID counterId = UUID.fromString("0a140152-2a74-4578-90e5-cc13871deee9");
     int expectedCount = 9;
-    await("Testing counter with At Least").atLeast(1, TimeUnit.MINUTES).and().atMost(2, TimeUnit.MINUTES).until(() -> {
-      int actualCount = counterService.getCounts(counterId).getCount();
-      logger.info("Current value of counter is: {}", actualCount);
-      return expectedCount == actualCount;
-    });
+    await("Testing counter with At Least").atLeast(1, TimeUnit.MINUTES).and().atMost(2, TimeUnit.MINUTES)
+        .until(() -> {
+          int actualCount = counterService.getCounts(counterId).getCount();
+          logger.info("Current value of counter is: {}", actualCount);
+          return expectedCount == actualCount;
+        });
 
     return "Matched!!";
   }
